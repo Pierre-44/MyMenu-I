@@ -1,5 +1,7 @@
 package com.ocr.anthony;
 
+import java.util.Scanner;
+
 public class Order {
     /**
      * Display all available menus in the restaurant.
@@ -23,5 +25,12 @@ public class Order {
             case 3 -> System.out.println("Vous avez choisi comme menu : végétarien");
             default -> System.out.println("Vous n'avez pas choisi de menu parmi les choix proposés");
         }
+    }
+
+    public void runMenu() {
+        this.displayAvailableMenu();
+        Scanner sc = new Scanner(System.in);
+        int nb = sc.nextInt();
+        this.displaySelectedMenu(nb); // ici on passe la variable nb récupéré du scanner  à la methode displaySelectedMenu
     }
 }
