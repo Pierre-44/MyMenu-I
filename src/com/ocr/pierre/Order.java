@@ -1,4 +1,4 @@
-package com.ocr.anthony;
+package com.ocr.pierre;
 
 import java.util.Scanner;
 
@@ -54,6 +54,20 @@ public class Order {
                 case 2 -> System.out.println("Vous avez choisi comme accompagnement : pas de riz");
                 default -> System.out.println("Vous n'avez pas choisi d'accompagnement parmi les choix proposés");
             }
+        }
+    }
+
+    /**
+     *Display a selected drink.
+     * @param nbDrink The selected drink
+     */
+    public void displaySelectedDrink(int nbDrink) {
+        switch (nbDrink) {
+            case 1 -> System.out.println("Vous avez choisi comme boisson : eau plate");
+            case 2 -> System.out.println("Vous avez choisi comme boisson : eau gazeuse");
+            case 3 -> System.out.println("Vous avez choisi comme boisson : soda");
+            default -> System.out.println("Vous n'avez pas choisi de boisson parmis les choix proposés");
+
         }
     }
 }
